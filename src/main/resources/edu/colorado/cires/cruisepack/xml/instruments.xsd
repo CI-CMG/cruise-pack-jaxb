@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema targetNamespace="https://colorado.edu/cires/cruisepack/instruments"
+  xmlns="https://colorado.edu/cires/cruisepack/instruments"
+  xmlns:xs="http://www.w3.org/2001/XMLSchema"
+  elementFormDefault="qualified">
+
+  <xs:complexType name="Instrument">
+    <xs:sequence>
+      <xs:element name="Name" type="xs:string"/>
+      <xs:element name="ShortName" type="xs:string"/>
+      <xs:element name="FileExtension" type="xs:string" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+    <xs:attribute name="uuid" type="xs:string"/>
+    <xs:attribute name="use" type="xs:boolean" default="true"/>
+    <xs:attribute name="flatten" type="xs:boolean" default="false"/>
+  </xs:complexType>
+
+  <xs:complexType name="InstrumentGroup">
+    <xs:sequence>
+      <xs:element name="DataType" type="xs:string"/>
+      <xs:element name="ShortType" type="xs:string"/>
+      <xs:element name="Instrument" type="Instrument" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="Instruments">
+    <xs:sequence>
+      <xs:element name="InstrumentGroup" type="InstrumentGroup" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:element name="Instruments" type="Instruments"/>
+
+</xs:schema>
