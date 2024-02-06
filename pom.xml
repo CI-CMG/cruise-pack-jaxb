@@ -41,7 +41,7 @@
   </distributionManagement>
 
   <properties>
-    <maven.compiler.release>8</maven.compiler.release>
+    <maven.compiler.release>11</maven.compiler.release>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
     <javadoc.version>3.3.1</javadoc.version>
@@ -54,7 +54,7 @@
     <dependency>
       <groupId>jakarta.xml.bind</groupId>
       <artifactId>jakarta.xml.bind-api</artifactId>
-      <version>2.3.3</version>
+      <version>4.0.1</version>
     </dependency>
     <dependency>
       <groupId>org.jsoup</groupId>
@@ -145,7 +145,7 @@
       <plugin>
         <groupId>org.codehaus.mojo</groupId>
         <artifactId>jaxb2-maven-plugin</artifactId>
-        <version>2.5.0</version>
+        <version>3.1.0</version>
         <executions>
           <execution>
             <id>xjc</id>
@@ -164,23 +164,6 @@
             <source>src/main/resources/edu/colorado/cires/cruisepack/xml/ships.xsd</source>
           </sources>
         </configuration>
-        <dependencies>
-          <dependency>
-            <groupId>org.glassfish.jaxb</groupId>
-            <artifactId>jaxb-xjc</artifactId>
-            <version>2.3.3</version>
-          </dependency>
-          <dependency>
-            <groupId>org.glassfish.jaxb</groupId>
-            <artifactId>jaxb-jxc</artifactId>
-            <version>2.3.3</version>
-          </dependency>
-          <dependency>
-            <groupId>com.sun.xml.bind</groupId>
-            <artifactId>jaxb-impl</artifactId>
-            <version>2.3.3</version>
-          </dependency>
-        </dependencies>
       </plugin>
 
       <plugin>
