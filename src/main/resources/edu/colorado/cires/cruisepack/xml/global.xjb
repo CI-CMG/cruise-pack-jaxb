@@ -27,4 +27,10 @@
     </schemaBindings>
   </bindings>
 
+  <bindings schemaLocation="seas.xsd">
+    <schemaBindings>
+      <package name="edu.colorado.cires.cruisepack.xml.sea" />
+    </schemaBindings>
+  </bindings>
+
 </bindings>

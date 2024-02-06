@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema targetNamespace="https://colorado.edu/cires/cruisepack/seas"
+  xmlns="https://colorado.edu/cires/cruisepack/seas"
+  xmlns:xs="http://www.w3.org/2001/XMLSchema"
+  elementFormDefault="qualified">
+
+  <xs:complexType name="Sea">
+    <xs:all>
+      <xs:element name="Uuid" type="xs:string"/>
+      <xs:element name="Name" type="xs:string"/>
+    </xs:all>
+    <xs:attribute name="use" type="xs:boolean" default="true"/>
+  </xs:complexType>
+
+  <xs:complexType name="SeaList">
+    <xs:sequence>
+      <xs:element name="Sea" type="Sea" minOccurs="1" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="SeaData">
+    <xs:all>
+      <xs:element name="DataVersion" type="xs:string"/>
+      <xs:element name="Seas" type="SeaList" minOccurs="0"/>
+    </xs:all>
+  </xs:complexType>
+
+  <xs:element name="SeaData" type="SeaData"/>
+
+</xs:schema>
