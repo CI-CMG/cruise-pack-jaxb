@@ -21,4 +21,10 @@
     </schemaBindings>
   </bindings>
 
+  <bindings schemaLocation="ports.xsd">
+    <schemaBindings>
+      <package name="edu.colorado.cires.cruisepack.xml.port" />
+    </schemaBindings>
+  </bindings>
+
 </bindings>
