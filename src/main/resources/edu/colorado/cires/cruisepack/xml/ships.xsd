@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema targetNamespace="https://colorado.edu/cires/cruisepack/ships"
+  xmlns="https://colorado.edu/cires/cruisepack/ships"
+  xmlns:xs="http://www.w3.org/2001/XMLSchema"
+  elementFormDefault="qualified">
+
+  <xs:complexType name="Ship">
+    <xs:all>
+      <xs:element name="Uuid" type="xs:string"/>
+      <xs:element name="Name" type="xs:string"/>
+    </xs:all>
+    <xs:attribute name="use" type="xs:boolean" default="true"/>
+  </xs:complexType>
+
+  <xs:complexType name="ShipList">
+    <xs:sequence>
+      <xs:element name="Ship" type="Ship" minOccurs="1" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="ShipData">
+    <xs:all>
+      <xs:element name="DataVersion" type="xs:string"/>
+      <xs:element name="Ships" type="ShipList" minOccurs="0"/>
+    </xs:all>
+  </xs:complexType>
+
+  <xs:element name="ShipData" type="ShipData"/>
+
+</xs:schema>

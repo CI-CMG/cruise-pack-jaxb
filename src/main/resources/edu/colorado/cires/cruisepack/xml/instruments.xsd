@@ -4,31 +4,50 @@
   xmlns:xs="http://www.w3.org/2001/XMLSchema"
   elementFormDefault="qualified">
 
-  <xs:complexType name="Instrument">
+  <xs:complexType name="FileExtensionList">
     <xs:sequence>
+      <xs:element name="FileExtension" type="xs:string" minOccurs="1" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="Instrument">
+    <xs:all>
+      <xs:element name="Uuid" type="xs:string"/>
       <xs:element name="Name" type="xs:string"/>
       <xs:element name="ShortName" type="xs:string"/>
-      <xs:element name="FileExtension" type="xs:string" minOccurs="0" maxOccurs="unbounded"/>
-    </xs:sequence>
-    <xs:attribute name="uuid" type="xs:string"/>
+      <xs:element name="FileExtensions" type="FileExtensionList" minOccurs="0"/>
+    </xs:all>
     <xs:attribute name="use" type="xs:boolean" default="true"/>
     <xs:attribute name="flatten" type="xs:boolean" default="false"/>
   </xs:complexType>
 
-  <xs:complexType name="InstrumentGroup">
+  <xs:complexType name="InstrumentList">
     <xs:sequence>
+      <xs:element name="Instrument" type="Instrument" minOccurs="1" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="InstrumentGroup">
+    <xs:all>
       <xs:element name="DataType" type="xs:string"/>
       <xs:element name="ShortType" type="xs:string"/>
-      <xs:element name="Instrument" type="Instrument" minOccurs="0" maxOccurs="unbounded"/>
-    </xs:sequence>
+      <xs:element name="Instruments" type="InstrumentList" minOccurs="0"/>
+    </xs:all>
   </xs:complexType>
 
-  <xs:complexType name="Instruments">
+  <xs:complexType name="InstrumentGroupList">
     <xs:sequence>
-      <xs:element name="InstrumentGroup" type="InstrumentGroup" minOccurs="0" maxOccurs="unbounded"/>
+      <xs:element name="InstrumentGroup" type="InstrumentGroup" minOccurs="1" maxOccurs="unbounded"/>
     </xs:sequence>
   </xs:complexType>
 
-  <xs:element name="Instruments" type="Instruments"/>
+  <xs:complexType name="InstrumentData">
+    <xs:all>
+      <xs:element name="DataVersion" type="xs:string"/>
+      <xs:element name="InstrumentGroups" type="InstrumentGroupList" minOccurs="0"/>
+    </xs:all>
+  </xs:complexType>
+
+  <xs:element name="InstrumentData" type="InstrumentData"/>
 
 </xs:schema>
