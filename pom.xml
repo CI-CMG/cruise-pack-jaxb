@@ -161,6 +161,7 @@
           </xjbSources>
           <sources>
             <source>src/main/resources/edu/colorado/cires/cruisepack/xml/instruments.xsd</source>
+            <source>src/main/resources/edu/colorado/cires/cruisepack/xml/ships.xsd</source>
           </sources>
         </configuration>
         <dependencies>

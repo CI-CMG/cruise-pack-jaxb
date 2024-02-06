@@ -11,7 +11,13 @@
 
   <bindings schemaLocation="instruments.xsd">
     <schemaBindings>
-      <package name="edu.colorado.cires.cruisepack.xml" />
+      <package name="edu.colorado.cires.cruisepack.xml.instrument" />
+    </schemaBindings>
+  </bindings>
+
+  <bindings schemaLocation="ships.xsd">
+    <schemaBindings>
+      <package name="edu.colorado.cires.cruisepack.xml.ship" />
     </schemaBindings>
   </bindings>
 
