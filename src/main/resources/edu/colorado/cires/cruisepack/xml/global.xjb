@@ -33,4 +33,10 @@
     </schemaBindings>
   </bindings>
 
+  <bindings schemaLocation="people.xsd">
+    <schemaBindings>
+      <package name="edu.colorado.cires.cruisepack.xml.person"/>
+    </schemaBindings>
+  </bindings>
+
 </bindings>

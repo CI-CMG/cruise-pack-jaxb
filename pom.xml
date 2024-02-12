@@ -164,6 +164,7 @@
             <source>src/main/resources/edu/colorado/cires/cruisepack/xml/ships.xsd</source>
             <source>src/main/resources/edu/colorado/cires/cruisepack/xml/ports.xsd</source>
             <source>src/main/resources/edu/colorado/cires/cruisepack/xml/seas.xsd</source>
+            <source>src/main/resources/edu/colorado/cires/cruisepack/xml/people.xsd</source>
           </sources>
         </configuration>
       </plugin>
