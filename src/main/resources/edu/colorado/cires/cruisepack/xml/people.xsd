@@ -22,4 +22,18 @@
     </xs:all>
   </xs:complexType>
 
+  <xs:complexType name="PersonList">
+    <xs:sequence>
+      <xs:element name="Person" type="Person" minOccurs="1" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="PersonData">
+    <xs:all>
+      <xs:element name="DataVersion" type="xs:string"/>
+      <xs:element name="People" type="PersonList" minOccurs="0"/>
+    </xs:all>
+  </xs:complexType>
+
+  <xs:element name="PersonData" type="PersonData"/>
 </xs:schema>
