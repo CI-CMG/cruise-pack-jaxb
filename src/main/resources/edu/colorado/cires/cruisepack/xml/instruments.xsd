@@ -27,10 +27,37 @@
     </xs:sequence>
   </xs:complexType>
 
+  <xs:complexType name="AdditionalFieldOption">
+    <xs:all>
+      <xs:element name="DisplayValue" type="xs:string"/>
+      <xs:element name="Code" type="xs:string" minOccurs="0"/>
+    </xs:all>
+  </xs:complexType>
+
+  <xs:complexType name="AdditionalFieldOptionList">
+    <xs:sequence>
+      <xs:element name="AdditionalFieldOption" type="AdditionalFieldOption" minOccurs="1" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="AdditionalField">
+    <xs:all>
+      <xs:element name="Type" type="xs:string"/>
+      <xs:element name="AdditionalFieldOptions" type="AdditionalFieldOptionList" minOccurs="0"/>
+    </xs:all>
+  </xs:complexType>
+
+  <xs:complexType name="AdditionalFieldList">
+    <xs:sequence>
+      <xs:element name="AdditionalField" type="AdditionalField" minOccurs="1" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+
   <xs:complexType name="InstrumentGroup">
     <xs:all>
       <xs:element name="DataType" type="xs:string"/>
       <xs:element name="ShortType" type="xs:string"/>
+      <xs:element name="AdditionalFields" type="AdditionalFieldList" minOccurs="0"/>
       <xs:element name="Instruments" type="InstrumentList" minOccurs="0"/>
     </xs:all>
   </xs:complexType>
