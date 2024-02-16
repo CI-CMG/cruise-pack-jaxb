@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema targetNamespace="https://colorado.edu/cires/cruisepack/projects"
+  xmlns="https://colorado.edu/cires/cruisepack/projects"
+  xmlns:xs="http://www.w3.org/2001/XMLSchema"
+  elementFormDefault="qualified">
+
+  <xs:complexType name="Project">
+    <xs:all>
+      <xs:element name="Uuid" type="xs:string"/>
+      <xs:element name="Name" type="xs:string"/>
+      <xs:element name="Use" type="xs:boolean"/>
+    </xs:all>
+  </xs:complexType>
+
+  <xs:complexType name="ProjectList">
+    <xs:sequence>
+      <xs:element name="Project" type="Project" minOccurs="1" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="ProjectData">
+    <xs:all>
+      <xs:element name="DataVersion" type="xs:string"/>
+      <xs:element name="Projects" type="ProjectList" minOccurs="0"/>
+    </xs:all>
+  </xs:complexType>
+
+  <xs:element name="ProjectData" type="ProjectData"/>
+
+</xs:schema>

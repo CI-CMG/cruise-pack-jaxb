@@ -45,4 +45,10 @@
     </schemaBindings>
   </bindings>
 
+  <bindings schemaLocation="projects.xsd">
+    <schemaBindings>
+      <package name="edu.colorado.cires.cruisepack.xml.projects"/>
+    </schemaBindings>
+  </bindings>
+
 </bindings>
