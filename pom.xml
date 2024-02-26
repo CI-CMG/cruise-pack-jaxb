@@ -168,6 +168,7 @@
             <source>src/main/resources/edu/colorado/cires/cruisepack/xml/organizations.xsd</source>
             <source>src/main/resources/edu/colorado/cires/cruisepack/xml/projects.xsd</source>
             <source>src/main/resources/edu/colorado/cires/cruisepack/xml/waterColumnCalibrationStates.xsd</source>
+            <source>src/main/resources/edu/colorado/cires/cruisepack/xml/singlebeamVerticalDatums.xsd</source>
           </sources>
         </configuration>
       </plugin>

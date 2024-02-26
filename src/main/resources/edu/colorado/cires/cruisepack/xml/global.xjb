@@ -57,4 +57,10 @@
     </schemaBindings>
   </bindings>
 
+  <bindings schemaLocation="singlebeamVerticalDatums.xsd">
+    <schemaBindings>
+      <package name="edu.colorado.cires.cruisepack.xml.singlebeamVerticalDatum"/>
+    </schemaBindings>
+  </bindings>
+
 </bindings>

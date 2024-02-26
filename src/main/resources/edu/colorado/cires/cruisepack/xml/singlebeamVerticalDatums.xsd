@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema targetNamespace="https://colorado.edu/cires/cruisepack/singlebeamVerticalDatums"
+  xmlns="https://colorado.edu/cires/cruisepack/singlebeamVerticalDatums"
+  xmlns:xs="http://www.w3.org/2001/XMLSchema"
+  elementFormDefault="qualified">
+
+  <xs:complexType name="SinglebeamVerticalDatum">
+    <xs:all>
+      <xs:element name="Uuid" type="xs:string"/>
+      <xs:element name="Name" type="xs:string"/>
+    </xs:all>
+  </xs:complexType>
+
+  <xs:complexType name="SinglebeamVerticalDatumList">
+    <xs:sequence>
+      <xs:element name="SinglebeamVerticalDatum" type="SinglebeamVerticalDatum" minOccurs="1" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="SinglebeamVerticalDatumData">
+    <xs:all>
+      <xs:element name="DataVersion" type="xs:string"/>
+      <xs:element name="SinglebeamVerticalDatums" type="SinglebeamVerticalDatumList" minOccurs="0"/>
+    </xs:all>
+  </xs:complexType>
+
+  <xs:element name="SinglebeamVerticalDatumData" type="SinglebeamVerticalDatumData"/>
+
+</xs:schema>
