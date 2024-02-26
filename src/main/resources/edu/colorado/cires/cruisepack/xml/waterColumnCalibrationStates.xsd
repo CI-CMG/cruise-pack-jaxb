@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema targetNamespace="https://colorado.edu/cires/cruisepack/waterColumnCalibrationStates"
+  xmlns="https://colorado.edu/cires/cruisepack/waterColumnCalibrationStates"
+  xmlns:xs="http://www.w3.org/2001/XMLSchema"
+  elementFormDefault="qualified">
+
+  <xs:complexType name="WaterColumnCalibrationState">
+    <xs:all>
+      <xs:element name="Uuid" type="xs:string"/>
+      <xs:element name="Name" type="xs:string"/>
+    </xs:all>
+  </xs:complexType>
+
+  <xs:complexType name="WaterColumnCalibrationStateList">
+    <xs:sequence>
+      <xs:element name="WaterColumnCalibrationState" type="WaterColumnCalibrationState" minOccurs="1" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="WaterColumnCalibrationStateData">
+    <xs:all>
+      <xs:element name="DataVersion" type="xs:string"/>
+      <xs:element name="WaterColumnCalibrationStates" type="WaterColumnCalibrationStateList" minOccurs="0"/>
+    </xs:all>
+  </xs:complexType>
+
+  <xs:element name="WaterColumnCalibrationStateData" type="WaterColumnCalibrationStateData"/>
+
+</xs:schema>
