@@ -63,4 +63,10 @@
     </schemaBindings>
   </bindings>
 
+  <bindings schemaLocation="navigationDatums.xsd">
+    <schemaBindings>
+      <package name="edu.colorado.cires.cruisepack.xml.navigationDatum"/>
+    </schemaBindings>
+  </bindings>
+
 </bindings>
