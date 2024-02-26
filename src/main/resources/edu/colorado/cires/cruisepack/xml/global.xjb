@@ -53,7 +53,7 @@
 
   <bindings schemaLocation="waterColumnCalibrationStates.xsd">
     <schemaBindings>
-      <package name="edu.colorado.cires.cruisepack.xml.waterColumnCalibrationStates"/>
+      <package name="edu.colorado.cires.cruisepack.xml.waterColumnCalibrationState"/>
     </schemaBindings>
   </bindings>
 
