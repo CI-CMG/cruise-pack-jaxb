@@ -171,6 +171,7 @@
             <source>src/main/resources/edu/colorado/cires/cruisepack/xml/singlebeamVerticalDatums.xsd</source>
             <source>src/main/resources/edu/colorado/cires/cruisepack/xml/navigationDatums.xsd</source>
             <source>src/main/resources/edu/colorado/cires/cruisepack/xml/gravityCorrectionModels.xsd</source>
+            <source>src/main/resources/edu/colorado/cires/cruisepack/xml/magneticsCorrectionModels.xsd</source>
           </sources>
         </configuration>
       </plugin>

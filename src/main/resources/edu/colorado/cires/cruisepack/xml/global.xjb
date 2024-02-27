@@ -75,4 +75,10 @@
     </schemaBindings>
   </bindings>
 
+  <bindings schemaLocation="magneticsCorrectionModels.xsd">
+    <schemaBindings>
+      <package name="edu.colorado.cires.cruisepack.xml.magneticsCorrectionModel"/>
+    </schemaBindings>
+  </bindings>
+
 </bindings>

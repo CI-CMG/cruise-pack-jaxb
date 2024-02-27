@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema targetNamespace="https://colorado.edu/cires/cruisepack/magneticsCorrectionModels"
+  xmlns="https://colorado.edu/cires/cruisepack/magneticsCorrectionModels"
+  xmlns:xs="http://www.w3.org/2001/XMLSchema"
+  elementFormDefault="qualified">
+
+  <xs:complexType name="MagneticsCorrectionModel">
+    <xs:all>
+      <xs:element name="Uuid" type="xs:string"/>
+      <xs:element name="Name" type="xs:string"/>
+    </xs:all>
+  </xs:complexType>
+
+  <xs:complexType name="MagneticsCorrectionModelList">
+    <xs:sequence>
+      <xs:element name="MagneticsCorrectionModel" type="MagneticsCorrectionModel" minOccurs="1" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="MagneticsCorrectionModelData">
+    <xs:all>
+      <xs:element name="DataVersion" type="xs:string"/>
+      <xs:element name="MagneticsCorrectionModels" type="MagneticsCorrectionModelList" minOccurs="0"/>
+    </xs:all>
+  </xs:complexType>
+
+  <xs:element name="MagneticsCorrectionModelData" type="MagneticsCorrectionModelData"/>
+
+</xs:schema>
