@@ -69,4 +69,10 @@
     </schemaBindings>
   </bindings>
 
+  <bindings schemaLocation="gravityCorrectionModels.xsd">
+    <schemaBindings>
+      <package name="edu.colorado.cires.cruisepack.xml.gravityCorrectionModel"/>
+    </schemaBindings>
+  </bindings>
+
 </bindings>
