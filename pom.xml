@@ -68,11 +68,11 @@
 
 
   <dependencies>
-    <dependency>
-      <groupId>jakarta.xml.bind</groupId>
-      <artifactId>jakarta.xml.bind-api</artifactId>
-      <version>4.0.1</version>
-    </dependency>
+<!--    <dependency>-->
+<!--      <groupId>jakarta.xml.bind</groupId>-->
+<!--      <artifactId>jakarta.xml.bind-api</artifactId>-->
+<!--      <version>4.0.1</version>-->
+<!--    </dependency>-->
     <dependency>
       <groupId>org.jsoup</groupId>
       <artifactId>jsoup</artifactId>
@@ -150,39 +150,39 @@
 
     <plugins>
 
-      <plugin>
-        <groupId>org.codehaus.mojo</groupId>
-        <artifactId>jaxb2-maven-plugin</artifactId>
-        <version>3.1.0</version>
-        <executions>
-          <execution>
-            <id>xjc</id>
-            <goals>
-              <goal>xjc</goal>
-            </goals>
-          </execution>
-        </executions>
-        <configuration>
-          <!--          <noPackageLevelAnnotations>true</noPackageLevelAnnotations>-->
-          <xjbSources>
-            <xjbSource>src/main/resources/edu/colorado/cires/cruisepack/xml/global.xjb</xjbSource>
-          </xjbSources>
-          <sources>
-            <source>src/main/resources/edu/colorado/cires/cruisepack/xml/instruments.xsd</source>
-            <source>src/main/resources/edu/colorado/cires/cruisepack/xml/ships.xsd</source>
-            <source>src/main/resources/edu/colorado/cires/cruisepack/xml/ports.xsd</source>
-            <source>src/main/resources/edu/colorado/cires/cruisepack/xml/seas.xsd</source>
-            <source>src/main/resources/edu/colorado/cires/cruisepack/xml/people.xsd</source>
-            <source>src/main/resources/edu/colorado/cires/cruisepack/xml/organizations.xsd</source>
-            <source>src/main/resources/edu/colorado/cires/cruisepack/xml/projects.xsd</source>
-            <source>src/main/resources/edu/colorado/cires/cruisepack/xml/waterColumnCalibrationStates.xsd</source>
-            <source>src/main/resources/edu/colorado/cires/cruisepack/xml/singlebeamVerticalDatums.xsd</source>
-            <source>src/main/resources/edu/colorado/cires/cruisepack/xml/navigationDatums.xsd</source>
-            <source>src/main/resources/edu/colorado/cires/cruisepack/xml/gravityCorrectionModels.xsd</source>
-            <source>src/main/resources/edu/colorado/cires/cruisepack/xml/magneticsCorrectionModels.xsd</source>
-          </sources>
-        </configuration>
-      </plugin>
+<!--      <plugin>-->
+<!--        <groupId>org.codehaus.mojo</groupId>-->
+<!--        <artifactId>jaxb2-maven-plugin</artifactId>-->
+<!--        <version>3.1.0</version>-->
+<!--        <executions>-->
+<!--          <execution>-->
+<!--            <id>xjc</id>-->
+<!--            <goals>-->
+<!--              <goal>xjc</goal>-->
+<!--            </goals>-->
+<!--          </execution>-->
+<!--        </executions>-->
+<!--        <configuration>-->
+<!--          &lt;!&ndash;          <noPackageLevelAnnotations>true</noPackageLevelAnnotations>&ndash;&gt;-->
+<!--          <xjbSources>-->
+<!--            <xjbSource>src/main/resources/edu/colorado/cires/cruisepack/xml/global.xjb</xjbSource>-->
+<!--          </xjbSources>-->
+<!--          <sources>-->
+<!--            <source>src/main/resources/edu/colorado/cires/cruisepack/xml/instruments.xsd</source>-->
+<!--            <source>src/main/resources/edu/colorado/cires/cruisepack/xml/ships.xsd</source>-->
+<!--            <source>src/main/resources/edu/colorado/cires/cruisepack/xml/ports.xsd</source>-->
+<!--            <source>src/main/resources/edu/colorado/cires/cruisepack/xml/seas.xsd</source>-->
+<!--            <source>src/main/resources/edu/colorado/cires/cruisepack/xml/people.xsd</source>-->
+<!--            <source>src/main/resources/edu/colorado/cires/cruisepack/xml/organizations.xsd</source>-->
+<!--            <source>src/main/resources/edu/colorado/cires/cruisepack/xml/projects.xsd</source>-->
+<!--            <source>src/main/resources/edu/colorado/cires/cruisepack/xml/waterColumnCalibrationStates.xsd</source>-->
+<!--            <source>src/main/resources/edu/colorado/cires/cruisepack/xml/singlebeamVerticalDatums.xsd</source>-->
+<!--            <source>src/main/resources/edu/colorado/cires/cruisepack/xml/navigationDatums.xsd</source>-->
+<!--            <source>src/main/resources/edu/colorado/cires/cruisepack/xml/gravityCorrectionModels.xsd</source>-->
+<!--            <source>src/main/resources/edu/colorado/cires/cruisepack/xml/magneticsCorrectionModels.xsd</source>-->
+<!--          </sources>-->
+<!--        </configuration>-->
+<!--      </plugin>-->
 
       <plugin>
         <groupId>org.sonatype.plugins</groupId>
@@ -228,18 +228,18 @@
           </execution>
         </executions>
       </plugin>
-      <plugin>
-        <groupId>com.github.spotbugs</groupId>
-        <artifactId>spotbugs-maven-plugin</artifactId>
-        <version>4.2.2</version>
-        <executions>
-          <execution>
-            <goals>
-              <goal>check</goal>
-            </goals>
-          </execution>
-        </executions>
-      </plugin>
+<!--      <plugin>-->
+<!--        <groupId>com.github.spotbugs</groupId>-->
+<!--        <artifactId>spotbugs-maven-plugin</artifactId>-->
+<!--        <version>4.2.2</version>-->
+<!--        <executions>-->
+<!--          <execution>-->
+<!--            <goals>-->
+<!--              <goal>check</goal>-->
+<!--            </goals>-->
+<!--          </execution>-->
+<!--        </executions>-->
+<!--      </plugin>-->
     </plugins>
   </build>
 
