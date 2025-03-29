@@ -7,11 +7,11 @@ public class GravityCorrectionModelData {
   private String version;
   private List<GravityCorrectionModel> gravityCorrectionModels = new ArrayList<>();
 
-  public String getVersion() {
+  public String getDataVersion() {
     return version;
   }
 
-  public void setVersion(String version) {
+  public void setDataVersion(String version) {
     this.version = version;
   }
 

@@ -4,8 +4,16 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class PersonData {
+  private String dataVersion;
   private List<Person> people = new ArrayList<Person>();
-  private String version;
+
+  public String getDataVersion() {
+    return dataVersion;
+  }
+
+  public void setDataVersion(String dataVersion) {
+    this.dataVersion = dataVersion;
+  }
 
   public List<Person> getPeople() {
     return people;
@@ -16,13 +24,5 @@ public class PersonData {
       people = new ArrayList<>();
     }
     this.people = people;
-  }
-
-  public String getVersion() {
-    return version;
-  }
-
-  public void setVersion(String version) {
-    this.version = version;
   }
 }

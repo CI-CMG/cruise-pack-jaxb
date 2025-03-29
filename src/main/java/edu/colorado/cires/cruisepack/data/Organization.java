@@ -84,7 +84,7 @@ public class Organization {
     this.uuid = uuid;
   }
 
-  public boolean getUse() {
+  public boolean isUse() {
     return use;
   }
 

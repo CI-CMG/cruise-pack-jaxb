@@ -5,7 +5,7 @@ import java.util.List;
 
 public class InstrumentGroup {
   private String dataType;
-  private String shortName;
+  private String shortType;
   private List<Instrument> instruments = new ArrayList<Instrument>();
   private List<AdditionalField> additionalFields = new ArrayList<>();
 
@@ -17,12 +17,12 @@ public class InstrumentGroup {
     this.dataType = dataType;
   }
 
-  public String getShortName() {
-    return shortName;
+  public String getShortType() {
+    return shortType;
   }
 
-  public void setShortName(String shortName) {
-    this.shortName = shortName;
+  public void setShortType(String shortType) {
+    this.shortType = shortType;
   }
 
   public List<Instrument> getInstruments() {
